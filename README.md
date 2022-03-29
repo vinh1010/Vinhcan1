@@ -9,33 +9,9 @@ Vinhcan1/Vinhcan1 is a ✨ special ✨ repository because its `README.md` (this 
 You can click the Preview link to take a look at your changes.
 --->
 
-const axios = require("axios");
-const fs = require("fs");
+![](https://img.shields.io/badge/<WORD_ON_LEFT>-<WORD_ON_RIGHT>-informational?style=flat&logo=<LOGO_NAME>&logoColor=white&color=2bbc8a)
+![](https://img.shields.io/badge/<WORD_ON_LEFT>-<WORD_ON_RIGHT>-informational?style=flat&logo=data:image/svg%2bxml;base64,<BASE64_DATA>)
 
-const getQuote = async () => {
-  try {
-    const { data } = await axios.get("https://quotes.rest/qod?language=en&quot;);
-    const quote = data.contents.quotes[0].quote;
-    const author = data.contents.quotes[0].author;
+<!-- Actual text -->
 
-    console.log("new quote", `"${quote}"`);
-
-    return {
-      quote,
-      author,
-    };
-  } catch (err) {
-    console.error(err.message);
-    return {};
-  }
-};
-
-const generate = async () => {
-  const { quote, author } = await getQuote();
-
-  if (!quote) return;
-
-  fs.writeFileSync("README.md", `_**${quote}**_\n\n${author}`);
-};
-
-generate();
+![GitHub Light](https://github.com/github-light.png#gh-dark-mode-only)
